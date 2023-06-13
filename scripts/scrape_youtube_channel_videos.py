@@ -6,7 +6,7 @@ import yt_dlp
 def get_latest_videos(channel_url, num_videos):
     if channel_url.startswith('https://www.youtube.com/@'):
         channel_username = channel_url.split('https://www.youtube.com/@')[1]
-        channel_info_url = f'https://www.youtube.com/@mkbhd/videos'
+        channel_info_url = f'https://www.youtube.com/c/@mkbhd/videos'
     else:
         channel_info_url = channel_url + '/videos'
 

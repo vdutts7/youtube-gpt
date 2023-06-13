@@ -20,4 +20,4 @@ const SmallHands = () => (
   </div>
 );
 
-export default You;
+export default SmallHands;

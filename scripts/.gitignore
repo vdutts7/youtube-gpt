@@ -1,4 +1,4 @@
 .env
-# audio_files/
+audio_files/
 scrapped_channels/
 transcripts/

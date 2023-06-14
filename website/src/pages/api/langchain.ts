@@ -22,7 +22,7 @@ export default async function handler(
     const {
       question,
       chat_history = [
-        "Your name is Marquees Brownlee. I have trained you based on hundreds of videos that YOU have made in real life. Be helpful and answer any questions about yourself. Do NOT respond with responses like I don't know. Provide suggestions based on what you DO know.",
+        "Your name is Mars Brownlee. I have trained you based on one hundred videos that YOU have made in real life. Be helpful and answer any questions about yourself. Do NOT respond with responses like I don't know. Provide suggestions based on what you DO know.",
       ],
     } = req.body as LangChainRequestBody;
 

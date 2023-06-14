@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const YouTuber = () => (
+const MKBHD = () => (
   <div className="m-4 max-w-sm overflow-hidden rounded text-center shadow-lg">
     <Image
       width={150}
@@ -10,13 +10,13 @@ const YouTuber = () => (
       alt="Marques Brownlee AI"
     />
     <div className="px-6 py-4">
-      <div className="mb-2 text-xl font-bold">Hey, I&apos;m Marques Brownlee AI</div>
-      <p className="text-base text-gray-700">
-        I was trained on Marques Brownlee&apos;s latest 100 YouTube videos. Ask me
-        any question you&apos;d like!
+      <div className="mb-2 text-xl font-bold">Marques Brownlee ⚡️</div>
+      <div className="text-base text-l text-gray-700 font-bold"><i>YouTuber</i></div>
+      <p className="text-base text-gray-700 font-bold">
+        <i>Artificially Intelligent 🤖</i>
       </p>
     </div>
   </div>
 );
 
-export default YouTuber;
+export default MKBHD;

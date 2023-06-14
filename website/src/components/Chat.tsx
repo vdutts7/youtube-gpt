@@ -68,7 +68,7 @@ function Chat() {
         {messages.length === 0 && (
           <div className="mt-4 flex flex-col items-center justify-center space-y-2 text-gray-500">
             <BiMessageRounded size={48} />
-            <p>No messages yet. Start chatting below!</p>
+            <p>Hey, so there's something about the Vision Pro you NEED to know... 👓  </p>
           </div>
         )}
         {messages.map((message) => {
@@ -85,8 +85,8 @@ function Chat() {
               <div
                 className={`rounded-lg px-4 py-2 ${
                   message.sender === "User"
-                    ? "bg-blue-500 text-white"
-                    : "bg-gray-200 text-gray-800"
+                    ? "bg-black text-white"
+                    : "bg-red text-white"
                 }`}
               >
                 {message.content}
@@ -129,7 +129,7 @@ function Chat() {
           disabled={loading}
           onChange={(e) => setInput(e.target.value)}
           className="flex-grow rounded-md border border-gray-300 bg-white px-3 py-2 text-gray-800 focus:outline-none focus:ring-2 focus:ring-red-500"
-          placeholder="Type your message"
+          placeholder="Type your msessage"
         />
         <button
           type="submit"

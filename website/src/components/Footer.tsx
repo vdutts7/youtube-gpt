@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className="bottom-0 my-auto w-full bg-black p-6 text-white">
       <p className="text-center">
-        Questions, suggestions, etc. just DM on Twitter
+        Made by 
         <span className="ml-1">
           <a
             href="https://twitter.com/vdutts7"
@@ -16,12 +16,12 @@ const Footer = () => {
             @vdutts7
           </a>
         </span>{" "}
-        or an email at
+        based on YouTuber
         <a
-          href="mailto:me@vdutts7.com"
+          href="https://www.youtube.com/@mkbhd"
           className="ml-1 text-red-500 hover:text-red-300"
         >
-          me@vdutts7.com
+          MKBHD
         </a>
       </p>
     </div>

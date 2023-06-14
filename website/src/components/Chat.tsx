@@ -68,7 +68,7 @@ function Chat() {
         {messages.length === 0 && (
           <div className="mt-4 flex flex-col items-center justify-center space-y-2 text-gray-500">
             <BiMessageRounded size={48} />
-            <p>Hey, so there's something about the Vision Pro you NEED to know... 👓  </p>
+            <p>Hey, so I got something about the Vision Pro that you NEED to know... 👓  </p>
           </div>
         )}
         {messages.map((message) => {

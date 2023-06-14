@@ -54,17 +54,24 @@ def main(videos_data, transcriptions_directory):
         reader = csv.DictReader(f)
         for row in reader:
             try:
+                print(row['url'])
                 video_id = row['url'].split('=')[-1]
-                json_file_path = os.path.join(
-                    transcriptions_directory, f"{video_id}.json")
-                with open(json_file_path, 'r') as json_file:
-                    data = json.load(json_file)
-                    transcript = data.get('text')
-                    if transcript:
-                        store_transcript(
-                            transcript, row['url'], row.get('title'))
-                    else:
-                        print(f"No transcript in {json_file_path}")
+
+                # Search for the JSON file that contains the video ID
+                for filename in os.listdir(transcriptions_directory):
+                    if video_id in filename:
+                        json_file_path = os.path.join(transcriptions_directory, filename)
+                        with open(json_file_path, 'r') as json_file:
+                            data = json.load(json_file)
+                            transcript = data.get('text')
+                            if transcript:
+                                store_transcript(
+                                    transcript, row['url'], row.get('title'))
+                            else:
+                                print(f"No transcript in {json_file_path}")
+                        break
+                else:
+                    print(f"No JSON file found for video ID {video_id}")
             except KeyError as e:
                 print(f"Missing field: {e}")
 
@@ -78,4 +85,4 @@ if __name__ == '__main__':
                         help='Transcription output folder path')
     args = parser.parse_args()
 
-    main(args.audio_directory, args.transcriptions_directory)
+    main(args.videos_data, args.transcriptions_directory)

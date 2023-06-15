@@ -1,16 +1,15 @@
-# YT CHAT
+# YT VIDEO PROCESSING, SCRIPT, & DATA CLEANING
 
-## 1️⃣ Download YT Videos
+## 1️⃣ Download YT videos
 
-### Setup environment
+### Setup python environment
 
 - `conda env list`
 - `conda activate youtube-chat`
 
-### Scrape YT channel
+### Scrape YT channel `@YT_USERNAME`
 
-- `python scripts/scrape_youtube_channel_videos.py https://www.youtube.com/@mkbhd 100 scripts/scrapped_channels/mkbhd.csv`
-
+- `python scripts/scrape_youtube_channel_videos.py https://www.youtube.com/@YT_USERNAME 100 scripts/scrapped_channels/YT_USERNAME.csv`
 
 
 ### Download audio files

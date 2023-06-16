@@ -79,14 +79,13 @@ function Chat() {
             <div
               key={message.id}
               className={`flex flex-col items-end ${
-                message.sender === "User" ? "justify-end" : ""
-              }`}
-            >
+                message.sender === "User" ? "justify-end" : "justify-start"
+            }`} >
               <div
                 className={`rounded-lg px-4 py-2 ${
                   message.sender === "User"
                     ? "bg-black text-white"
-                    : "bg-red text-white"
+                    : "bg-gray-200 text-black"
                 }`}
               >
                 {message.content}
@@ -108,7 +107,7 @@ function Chat() {
                     .map((source, index) => (
                       <div
                         key={index}
-                        className="mt-2 transform cursor-pointer rounded bg-gray-100 p-2 text-sm shadow-md transition-all duration-300 ease-in-out hover:scale-105"
+                        className="mt-2 transform cursor-pointer rounded bg-white p-2 text-sm shadow-md transition-all duration-300 ease-in-out hover:scale-105"
                         onClick={() => window.open(source.url, "_blank")}
                       >
                         <p className="font-bold text-gray-700">
@@ -129,7 +128,7 @@ function Chat() {
           disabled={loading}
           onChange={(e) => setInput(e.target.value)}
           className="flex-grow rounded-md border border-gray-300 bg-white px-3 py-2 text-gray-800 focus:outline-none focus:ring-2 focus:ring-red-500"
-          placeholder="Type your msessage"
+          placeholder="Type your message"
         />
         <button
           type="submit"

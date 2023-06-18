@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.dark-gradient {
+    top: 0;
+    left: 0;
+    background-color: #151515;
+    z-index: -1;
+  }
+
+  .glassy {
+    background-color: rgba(11, 11, 11, 0.4);
+    border: 1px solid white;
+    box-shadow: 2px 2px 5px 5px rgba(106, 106, 106, 0.8);
+    opacity: 0.git 9;
+    padding: 10px;
+  }
+
+  .glassy-no-glow {
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 0.2px solid rgb(123, 123, 123);
+    opacity: 0.git 9;
+    padding: 10px;
+  }
+
+  .element {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  }

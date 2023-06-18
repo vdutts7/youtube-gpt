@@ -67,8 +67,7 @@ function Chat() {
       <div className="flex-grow space-y-4 overflow-y-auto border-2 border-solid p-4">
         {messages.length === 0 && (
           <div className="mt-4 flex flex-col items-center justify-center space-y-2 text-gray-500">
-            <BiMessageRounded size={48} />
-            <p>Hey, so I got something about the Vision Pro that you NEED to know... 👓  </p>
+            {/* <BiMessageRounded size={48} /> */}
           </div>
         )}
         {messages.map((message) => {
@@ -83,9 +82,7 @@ function Chat() {
             }`} >
               <div
                 className={`rounded-lg px-4 py-2 ${
-                  message.sender === "User"
-                    ? "bg-black text-white"
-                    : "bg-gray-200 text-black"
+                  message.sender === "User" ? "bg-black text-white" : "bg-gray-200 text-black"
                 }`}
               >
                 {message.content}
@@ -110,9 +107,14 @@ function Chat() {
                         className="mt-2 transform cursor-pointer rounded bg-white p-2 text-sm shadow-md transition-all duration-300 ease-in-out hover:scale-105"
                         onClick={() => window.open(source.url, "_blank")}
                       >
-                        <p className="font-bold text-gray-700">
-                          {source.title}
-                        </p>
+                        <div className="flex items-center">
+                          <img
+                            src="https://www.youtube.com/yts/img/favicon_48-vflVjB_Qk.png"
+                            alt="YouTube"
+                            className="mr-2 w-4 h-4"
+                          />
+                          <p className="font-bold text-gray-700">{source.title}</p>
+                        </div>
                       </div>
                     ))}
               </div>

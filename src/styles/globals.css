@@ -25,6 +25,21 @@
     padding: 10px;
   }
 
+  .chat-container {
+    background-color: rgb(0, 0, 0);
+    border: 0.2px solid rgb(123, 123, 123);
+    opacity: 1.git 0;
+    padding: 10px;
+  }
+
+  .cursorr-red {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='8' fill='red'/%3E%3C/svg%3E"), auto;
+  }
+
   .element {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  }
+
+  .navbar {
+    font-size: 204px;
   }

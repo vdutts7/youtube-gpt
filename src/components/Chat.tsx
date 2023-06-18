@@ -63,7 +63,7 @@ function Chat() {
       });
   };
   return (
-    <div className="m-2 flex h-4/5 flex-col overflow-y-auto glassy-no-glow bg-black px-2 rounded-lg sm:p-4 sm:border border-neutral-300 shadow-2xl">
+    <div className="m-2 flex h-4/5 flex-col overflow-y-auto chat-container px-2 rounded-lg sm:p-4 sm:border border-neutral-300 shadow-2xl">
       <div className="w-full bg-black flex-grow space-y-4 overflow-y-auto p-4">
 
         {messages.map((message) => {
@@ -130,19 +130,22 @@ function Chat() {
         <div ref={messagesEndRef} />
       </div>
       <div>
-        <form onSubmit={handleSubmit} className="w-full my-4 flex relative">
+        <form onSubmit={handleSubmit} className="cursorr-red w-full h-12 my-4 flex relative">
           <input
             type="text"
             disabled={loading}
             onChange={(e) => setInput(e.target.value)}
-            className="text-white bg-zinc-800 flex-grow rounded-md border border-gray-300 px-3 py-2 glassy focus:outline-none focus:border-white focus:shadow-outline box-shadow:2px 2px 5px 5px rgba(106, 106, 106, 0.8)" value={input} />
+            className="cursorr-red text-white bg-zinc-800 flex-grow rounded-md border border-gray-300 px-3 py-2 glassy focus:outline-none focus:border-white focus:shadow-outline box-shadow:2px 2px 5px 5px rgba(106, 106, 106, 0.8)" value={input} />
 
           <button className="absolute top-2 right-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" 
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 24 24" fill="none" 
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
-                className="flex-shrink-0 ml-2 hover:cursor-pointer rounded-full p-1 
-                          bg-red-600 focus:border-white box-shadow:2px 2px 5px 5px rgba(106, 106, 106, 0.8) focus:shadow-outline text-white hover:opacity-80">
-                <path d="M12 5l0 14"></path><path d="M18 11l-6 -6"></path><path d="M6 11l6 -6"></path>
+                className=" cursorr-red flex-shrink-0 ml-2 hover:cursor-pointer rounded-full p-1 bg-red-600 focus:border-white 
+                            shadow-outline text-white hover:stroke-white"
+                style={{ boxShadow: '0 0 10px 5px rgba(255, 0, 0, 0.5)' }}>
+              <path d="M12 5l0 14" className="hover:stroke-white hover:shadow-white"></path>
+              <path d="M18 11l-6 -6" className="hover:stroke-white hover:shadow-white"></path>
+              <path d="M6 11l6 -6" className="hover:stroke-white hover:shadow-white"></path>
             </svg>
           </button>
         </form>

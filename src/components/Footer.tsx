@@ -11,7 +11,7 @@ const Footer = () => {
             href="https://twitter.com/vdutts7"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-red-500 hover:text-red-300"
+            className="text-red-600 hover:font-bold"
           >
             @vdutts7
           </a>
@@ -19,7 +19,7 @@ const Footer = () => {
         based on YouTuber
         <a
           href="https://www.youtube.com/@mkbhd"
-          className="ml-1 text-red-500 hover:text-red-300"
+          className="ml-1 text-red-600 hover:font-bold"
         >
           MKBHD
         </a>

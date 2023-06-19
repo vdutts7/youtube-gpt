@@ -8,7 +8,7 @@ Then navigate to `/website` and complete.
 <div align="center">
     <img src="https://github.com/vdutts7/yt-chat-mkbhd/blob/main/public/yt-chat-logo_.png" alt="Logo" width="80" height="80">
     <img src="https://github.com/vdutts7/yt-chat-mkbhd/blob/main/public/mkbhd.png" alt="Logo" width="75" height="75">
-    <img src="https://github.com/vdutts7/yt-chat-mkbhd/assets/63992417/6551160e-31f9-4fde-9da0-0ceaea2ba665" alt="Logo" width="67" height="67">
+    <img src="https://github.com/vdutts7/yt-chat-mkbhd/blob/main/public/openai.png" alt="Logo" width="67" height="67">
 
   
   </a>

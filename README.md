@@ -10,8 +10,6 @@ Then navigate to `/website` and complete.
     <img src="https://github.com/vdutts7/yt-chat-mkbhd/blob/main/public/mkbhd.png" alt="Logo" width="75" height="75">
     <img src="https://github.com/vdutts7/yt-chat-mkbhd/assets/63992417/6551160e-31f9-4fde-9da0-0ceaea2ba665" alt="Logo" width="67" height="67">
 
-
-
   
   </a>
   <h3 align="center">YouTube MKBHD AI Chatbot</h3>
@@ -22,7 +20,7 @@ Then navigate to `/website` and complete.
 
 
 
-
+file:///Users/vdutts7/Downloads/dscr-rec.gif
 
 
 <!-- TABLE OF CONTENTS -->

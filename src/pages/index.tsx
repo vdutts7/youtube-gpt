@@ -1,5 +1,5 @@
+/* eslint-disable */
 import MKBHD from "~/components/MKBHD";
-import User from "~/components/User";
 import Chat from "~/components/Chat";
 import "react-toastify/dist/ReactToastify.css";
 

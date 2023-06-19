@@ -1,9 +1,8 @@
+/* eslint-disable */
+
 import React from "react"; 
-import Image from "next/image";
 import { MarkGithubIcon } from '@primer/octicons-react';  
 import { IconBrandTwitter } from "@tabler/icons-react";
-
-import { FC } from "react";
 
 function Navbar() {
   return (

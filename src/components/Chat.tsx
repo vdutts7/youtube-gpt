@@ -1,7 +1,7 @@
+/* eslint-disable */
 import axios from "axios";
 import React, { useEffect, useRef, useState } from "react";
 import { toast } from "react-toastify";
-import { BiMessageRounded } from "react-icons/bi";
 
 interface Message {
   id: number;

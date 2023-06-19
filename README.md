@@ -78,7 +78,7 @@ PINECONE_INDEX=""
 ```
 
 Get API keys:
-- [AssemblyAI](https://www.assemblyai.com/docs)
+- [AssemblyAI](https://www.assemblyai.com/docs) - ~ $3.50 per 100 vids
 - [OpenAI](https://help.openai.com/en/articles/4936850-where-do-i-find-my-secret-api-key)
 - [Pinecone](https://docs.pinecone.io/docs/quickstart)
   
@@ -106,24 +106,37 @@ Setup python environemnt:
 - `pip install -r requirements.txt`
 
 Scrape YT channel. Replace `@mkbhd` with username of the channel of your choice and replace `100` with how ever no. of videos you want inlcuded (ccript traverses backwards starting from most recent upload). A new file `mkbhd.csv` will be created at the directory referenced below:
-- `python scripts/scrape_youtube_channel_videos.py https://www.youtube.com/@mkbhd 100 scripts/scraped_channels/mkbhd.csv`
+- `python scripts/scrape_vids.py https://www.youtube.com/@mkbhd 100 scripts/vid_list/mkbhd.csv`
+
+Refer to the  `example_mkbhd.csv` inside the folder and verify your output matches the format. 
+
+Download audio files.
+
+- `python scripts/download_yt_audios.py scripts/vid_list/mkbhd.csv scripts/audio_files/`
+
 
 2️⃣ Transcribe audio files ✍️
 
+We will utilize AssemblyAI's API wrapper class for OpenAI's Whisper API. Their script provides step-by-step directions for a more efficient, faster speech-to-text conversion as Whisper is way too slow and will cost you more. I spent ~ $3.50 to transcribe the 100 videos for MKBHD.
+
+`python scripts/transcribe_audios.py scripts/audio_files/ scripts/transcripts`
+
+
 3️⃣ Upsert to Pinecone database ⬆️☁️**
+
+
+- `python scripts/pinecone_helper.py scripts/vid_list/mkbhd.csv scripts/transcripts/`
+
+
+
+
+
+
+
 
 ### Embeddings and database backend
 
-Inside the `config` folder is `class-website-urls.ts`. Modify to your liking. Project is setup to handle HTML pages in a consistent HTML/CSS format, which are then scraped using the `cheerio` jQuery package. Modify `/utils/custom_web_loader.ts` to control which CSS elements of the webpages' text you want scraped.
-
-Manually run `scrape-embed.ts` from the `scripts` folder OR run the package script from terminal:
-
-```
-npm run scrape-embed
-```
-
-This is a one-time process and depending on size of data, it can take up to a few minutes. Check `documents` in your Supabase project and you should see rows populated with the embeddings that were just created.
-
+hhhhh
 
 ### Frontend UI with chat
 

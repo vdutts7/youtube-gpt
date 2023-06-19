@@ -203,6 +203,3 @@ _Alternatives: Heroku, Firebase, AWS Elastic Beanstalk, DigitalOcean, etc._
 
 [Vercel]: https://img.shields.io/badge/Vercel-FFFFFF?style=for-the-badge&logo=Vercel&logoColor=white&color=black
 [Vercel-url]: https://Vercel.com/
-
-
-

@@ -60,7 +60,7 @@ function Chat() {
       });
   };
   return (
-    <div className="m-2 ml-1 h-4/5 flex-col overflow-y-auto chat-container px-2 rounded-lg sm:p-4 sm:border border-neutral-300 shadow-2xl">
+    <div className="m-3 ml-1 flex-col overflow-y-auto chat-container px-2 rounded-lg sm:p-4 sm:border border-neutral-300 shadow-2xl">
       <div className="w-full bg-black flex-grow space-y-4 overflow-y-auto p-4">
 
         {messages.map((message) => {

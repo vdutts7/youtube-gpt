@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className="bottom-0 my-auto w-full bg-black p-6 text-white">
       <p className="text-center">
-        Made by 
+        Data processing, backend, & UI made by 
         <span className="ml-1">
           <a
             href="https://twitter.com/vdutts7"
@@ -16,16 +16,9 @@ const Footer = () => {
             @vdutts7
           </a>
         </span>{" "}
-        based on YouTuber
-        <a
-          href="https://www.youtube.com/@mkbhd"
-          className="ml-1 text-red-600 hover:font-bold"
-        >
-          MKBHD
-        </a>
+        . Follow me for more and access the source code for this object-- links in header. 
       </p>
     </div>
   );
 };
-
 export default Footer;

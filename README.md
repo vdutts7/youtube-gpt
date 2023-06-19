@@ -18,7 +18,8 @@ Then navigate to `/website` and complete.
   </p>
 </div>
 
-[file:///Users/vdutts7/Downloads/dscr-rec.gif](https://github.com/vdutts7/yt-chat-mkbhd/blob/main/public/p.gif)
+![](https://github.com/vdutts7/yt-chat-mkbhd/blob/main/public/p.gif)
+
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents

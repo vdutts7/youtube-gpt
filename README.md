@@ -97,10 +97,6 @@ Navigate to `scripts` folder.
 `cd scripts`
 
 This folder will host all of the data from the YouTube videos. 
-3 main parts: 
-**- 1️⃣ Download YT videos ⬇️
-- 2️⃣ Transcribe audio files ✍️
-- 3️⃣ Upsert to Pinecone database ⬆️☁️**
 
 **1️⃣ Download YT videos ⬇️**
 
@@ -112,7 +108,9 @@ Setup python environemnt:
 Scrape YT channel. Replace `@mkbhd` with username of the channel of your choice and replace `100` with how ever no. of videos you want inlcuded (ccript traverses backwards starting from most recent upload). A new file `mkbhd.csv` will be created at the directory referenced below:
 - `python scripts/scrape_youtube_channel_videos.py https://www.youtube.com/@mkbhd 100 scripts/scraped_channels/mkbhd.csv`
 
+2️⃣ Transcribe audio files ✍️
 
+3️⃣ Upsert to Pinecone database ⬆️☁️**
 
 ### Embeddings and database backend
 

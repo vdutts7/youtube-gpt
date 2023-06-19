@@ -1,5 +1,5 @@
 .env
 audio_files/
 
-scrapped_channels/
+vid_list/
 transcripts/

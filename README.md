@@ -25,9 +25,9 @@
     <a href="#how-to-build">💻 How to build</a>
         <ul>
             <li><a href="#initial-setup">Initial setup</a></li>
-            <li><a href=#prepare-supabase-environment>Prepare Supabase environment</a></li>
-            <li><a href=#embed-and-upsert>Embed and upsert</a></li>
-            <li><a href=#technical-explanation>Technical explanation</a></li>
+            <li><a href=#handle-massive-data>Handle massive data</a></li>
+            <li><a href=#embeddings-and-database-backend>Embeddings and database backend</a></li>
+            <li><a href=#Frontend-with-chat>Frontend UI with chat</a></li>
             <li><a href=#run-app>Run app</a></li>
         </ul>
     <a href="#next-steps">🚀 Next steps</a>
@@ -46,9 +46,10 @@
 <!-- ABOUT -->
 ## 📝 About
 
-More natural way to help students study for exams, review weekly content, and customize learnings to recreate similar problems etc to their prefernce. Trained on the weekly Notes. CS186 students, staff, and more generally anyone can clone and use this repo and adjust to their liking.
+Chat with 100+ YouTube videos from any creator in less than 10 minutes. This project combines basic Python scripting, vector embeddings, OpenAI, Pinecone, and Langchain into a modern chat interface, allowing you to quickly reference any content your favorite YouTuber covers. Type in natural language and get returned detailed answers: (1) in the style / tone of your YouTuber, and (2) with the top 2-3 specific videos referenced hyperlinked.
 
-_UC Berkeley 🐻🔵🟡 • CS186: Introduction to Database Systems • Spring 2023_ 
+
+_Example used in this repo is tech content creator Marques Brownlee, also known as MKBHD_ 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p> 
 
@@ -61,36 +62,59 @@ _Note: macOS version, adjust accordingly for Windows / Linux_
 Clone the repo and install dependencies.
 
 ```
-git clone https://github.com/vdutts7/cs186-ai-chat
-cd cs186-ai-chat
-pnpm install
+git clone https://github.com/vdutts7/yt-ai-chat
+cd yt-ai-chat
+npm install
 ```
 
-Create a .env file and add your API keys (refer `.env.local.example` for this template):
+Create a .env file in root directory and add your API keys (refer `.env.example` for this template):
 
 ```
+ASSEMBLY_AI_API_TOKEN=""
 OPENAI_API_KEY=""
-NEXT_PUBLIC_SUPABASE_URL=""
-NEXT_PUBLIC_SUPABASE_ANON_KEY=""
-SUPABASE_SERVICE_ROLE_KEY=""
+PINECONE_API_KEY=""
+PINECONE_ENVIRONMENT=""
+PINECONE_INDEX=""
 ```
 
 Get API keys:
+- [AssemblyAI](https://www.assemblyai.com/docs)
 - [OpenAI](https://help.openai.com/en/articles/4936850-where-do-i-find-my-secret-api-key)
-- [Supabase](https://supabase.com/docs) 
+- [Pinecone](https://docs.pinecone.io/docs/quickstart)
+  
 
 _**IMPORTANT: Verify that `.gitignore` contains `.env` in it.**_
 
 
 
-### Prepare Supabase environment
-
-I used Supabase as my vectorstore. _Alternatives: Pinecone, Qdrant, Weaviate, Chroma, etc_
-
-You should have already created a Supabase project to get your API keys. Inside the project's SQL editor, create a new query and run the `schema.sql`. You should now have a `documents` table created with 4 columns.
 
 
-### Embedding and upserting
+### Handle massive data
+
+
+Navigate to `scripts` folder. 
+
+`cd scripts`
+
+This folder will host all of the data from the YouTube videos. 
+3 main parts: 
+**- 1️⃣ Download YT videos ⬇️
+- 2️⃣ Transcribe audio files ✍️
+- 3️⃣ Upsert to Pinecone database ⬆️☁️**
+
+**1️⃣ Download YT videos ⬇️**
+
+Setup python environemnt:
+- `conda env list`
+- `conda activate youtube-chat`
+- `pip install -r requirements.txt`
+
+Scrape YT channel. Replace `@mkbhd` with username of the channel of your choice and replace `100` with how ever no. of videos you want inlcuded (ccript traverses backwards starting from most recent upload). A new file `mkbhd.csv` will be created at the directory referenced below:
+- `python scripts/scrape_youtube_channel_videos.py https://www.youtube.com/@mkbhd 100 scripts/scraped_channels/mkbhd.csv`
+
+
+
+### Embeddings and database backend
 
 Inside the `config` folder is `class-website-urls.ts`. Modify to your liking. Project is setup to handle HTML pages in a consistent HTML/CSS format, which are then scraped using the `cheerio` jQuery package. Modify `/utils/custom_web_loader.ts` to control which CSS elements of the webpages' text you want scraped.
 
@@ -103,7 +127,7 @@ npm run scrape-embed
 This is a one-time process and depending on size of data, it can take up to a few minutes. Check `documents` in your Supabase project and you should see rows populated with the embeddings that were just created.
 
 
-### Technical explanation
+### Frontend UI with chat
 
 The `scrape-embed.ts` script:
 

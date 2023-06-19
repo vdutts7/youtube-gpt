@@ -16,7 +16,7 @@ const Footer = () => {
             @vdutts7
           </a>
         </span>{" "}
-        . Follow me for more and access the source code for this object-- links in header. 
+        . Access the source code here. 
       </p>
     </div>
   );

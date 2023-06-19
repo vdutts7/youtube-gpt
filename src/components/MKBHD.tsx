@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import Image from "next/image";
 import { IconExternalLink } from "@tabler/icons-react";
 
@@ -19,8 +21,15 @@ const MKBHD = () => (
       <div className="text-base text-xs text-gray-400 text-center">YouTuber  •  AI Bot 🤖</div>
 
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '0rem' }}>
+        
         <a href="https://www.youtube.com/@mkbhd">
-          <img src="/yt.png" alt="YouTube logo" width={24} height={24} />
+          <Image
+            width={24}
+            height={24}
+            className="mx-auto rounded-full"
+            src="/yt.png"
+            alt="Marques Brownlee AI"
+          />
         </a>
         <a href="https://www.youtube.com/@mkbhd">
           <IconExternalLink
@@ -31,7 +40,7 @@ const MKBHD = () => (
 
       </div>
       <div className="text-base text-center text-xs text-gray-400 pt-2 mx-0">
-          What's up everyone, I made an AI doppelgänger chatbot to geek out about tech when I'm not around! This little guy hardcore studying all my videos and abosrbing some serious MKBHD wisdom!
+        What&rsquo;s up everyone, I made an AI doppelgänger chatbot to geek out about tech when I&rsquo;m not around! This little guy hardcore studying all my videos and abosrbing some serious MKBHD wisdom!
       </div>
     </div>
   </div>

@@ -22,7 +22,6 @@ Then navigate to `/website` and complete.
 
 
 
-https://github.com/vdutts7/cs186-ai-chat/assets/63992417/d3dd4bfc-ccb7-4801-b696-8a1cc0996e6a
 
 
 

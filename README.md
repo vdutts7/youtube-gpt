@@ -7,17 +7,7 @@
 
   
   </a>
-  <h3 align="center">YouTube MKBHD AI Chatbot</h3>
-  <p align="center">
-    YouTube MKBHD AI Chatbot ~ trained on 100+ videos from tech-gadget YouTuber <a href="https://www.youtube.com/@mkbhd">Marques Brownlee aka MKBHD</a>
-  </p>
-</div>
-
-![](https://github.com/vdutts7/yt-chat-mkbhd/blob/main/public/p.gif)
-
-<img src="https://github.com/vdutts7/yt-ai-chat/assets/63992417/0a795dca-41e4-4d34-80b9-ebe19268571c" alt="Logo" width="400" height="400">
-
-
+  <h3 align="center">YouTube MKBHD AI Chatbot</h3> <p align="center"> YouTube MKBHD AI Chatbot ~ trained on 100+ videos from tech-gadget YouTuber Marques Brownlee <a href="https://www.youtube.com/@mkbhd"> @MKBHD </a> </p> </div> <p align="center"> <img src="https://github.com/vdutts7/yt-chat-mkbhd/blob/main/public/p.gif"/> </p> 
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
@@ -30,7 +20,7 @@
             <li><a href="#initial-setup">Initial setup</a></li>
             <li><a href=#handle-massive-data>Handle massive data</a></li>
             <li><a href=#embeddings-and-database-backend>Embeddings and database backend</a></li>
-            <li><a href=#Frontend-with-chat>Frontend UI with chat</a></li>
+            <li><a href=#Frontend-UI-with-chat>Frontend UI with chat</a></li>
             <li><a href=#run-app>Run app</a></li>
         </ul>
     <a href="#next-steps">🚀 Next steps</a>
@@ -170,6 +160,7 @@ npm run dev
 
 Go to `http://localhost:3000`. You should be able to type and ask questions now. Done ✅ 
 
+<img src="https://github.com/vdutts7/yt-ai-chat/assets/63992417/0a795dca-41e4-4d34-80b9-ebe19268571c" alt="Logo" width="390" height="390">
 
 ## 🚀 Next steps
 

@@ -15,6 +15,9 @@
 
 ![](https://github.com/vdutts7/yt-chat-mkbhd/blob/main/public/p.gif)
 
+<img src="https://github.com/vdutts7/yt-ai-chat/assets/63992417/0a795dca-41e4-4d34-80b9-ebe19268571c" alt="Logo" width="400" height="400">
+
+
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents

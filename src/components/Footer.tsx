@@ -14,6 +14,7 @@ const Footer = () => {
             className="text-red-600 hover:font-bold"
           >
             @vdutts7.
+            </span>
           </a>
           Access the source code
           <a href="https://github.com/vdutts7/yt-ai-chat" target="_blank" rel="noopener noreferrer" className="text-red-600 

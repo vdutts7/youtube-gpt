@@ -64,7 +64,7 @@ Clone the repo and install dependencies.
 ```
 git clone https://github.com/vdutts7/yt-ai-chat
 cd yt-ai-chat
-npm install
+npm i
 ```
 
 Create a .env file in root directory and add your API keys (refer `.env.example` for this template):
@@ -110,10 +110,17 @@ Scrape YT channel. Replace `@mkbhd` with username of the channel of your choice 
 
 Refer to the  `example_mkbhd.csv` inside the folder and verify your output matches the format. 
 
+<img width="614" alt="image" src="https://github.com/vdutts7/yt-ai-chat/assets/63992417/7bf1c02c-7201-48b4-9607-e6de72fcafa2">
+
+
 Download audio files.
 
 - `python scripts/download_yt_audios.py scripts/vid_list/mkbhd.csv scripts/audio_files/`
 
+<img width="158" alt="image" src="https://github.com/vdutts7/yt-ai-chat/assets/63992417/8c16f79a-2957-4d45-b81e-c450cf7e77f1">
+
+
+<img width="164" alt="image" src="https://github.com/vdutts7/yt-ai-chat/assets/63992417/f1105604-145b-4019-8026-f1c262497cde">
 
 2️⃣ Transcribe audio files ✍️
 
@@ -121,22 +128,25 @@ We will utilize AssemblyAI's API wrapper class for OpenAI's Whisper API. Their s
 
 `python scripts/transcribe_audios.py scripts/audio_files/ scripts/transcripts`
 
+![Uploading image.png…]()
+
 
 3️⃣ Upsert to Pinecone database ⬆️☁️**
 
-
 - `python scripts/pinecone_helper.py scripts/vid_list/mkbhd.csv scripts/transcripts/`
 
-
-
-
-
+Pinecone index setup I used below. I used P1 since this is optimized for speed. 1536 is OpenAI's standard we're limited to when querying data from the vectorstore: 
+<img width="951" alt="image" src="https://github.com/vdutts7/yt-ai-chat/assets/63992417/01deb2f1-f563-4e9d-97bf-d32ccda61d62">
 
 
 
 ### Embeddings and database backend
 
-hhhhh
+Breaking down `scripts/pinecone_helper.py` :
+- Chunk size of 1000 characters with 500 character overlap. I found this working for me but obviously experiment and adjust according to your content library's size, complexity, etc.
+- Metadata: (1) video url and (2) video title
+
+With vectorstore loaded, we use Langchain's Conversational Retrieval QA to ask questions, extract relevant metadata from Pinecone, and deliver it back to the user in a packaged answer format
 
 ### Frontend UI with chat
 

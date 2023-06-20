@@ -70,9 +70,9 @@ PINECONE_INDEX=""
 ```
 
 Get API keys:
-    - [AssemblyAI](https://www.assemblyai.com/docs) - ~ $3.50 per 100 vids
-    - [OpenAI](https://help.openai.com/en/articles/4936850-where-do-i-find-my-secret-api-key)
-    - [Pinecone](https://docs.pinecone.io/docs/quickstart)
+- [AssemblyAI](https://www.assemblyai.com/docs) - ~ $3.50 per 100 vids
+- [OpenAI](https://help.openai.com/en/articles/4936850-where-do-i-find-my-secret-api-key)
+- [Pinecone](https://docs.pinecone.io/docs/quickstart)
       
 _**IMPORTANT: Verify that `.gitignore` contains `.env` in it.**_
 

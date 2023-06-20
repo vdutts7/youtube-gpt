@@ -7,7 +7,7 @@
 
   
   </a>
-  <h3 align="center">YouTube MKBHD AI Chatbot</h3> <p align="center"> YouTube MKBHD AI Chatbot ~ trained on 100+ videos from tech-gadget YouTuber Marques Brownlee <a href="https://www.youtube.com/@mkbhd"> @MKBHD </a> </p> </div> <p align="center"> <img src="https://github.com/vdutts7/yt-chat-mkbhd/blob/main/public/p.gif"/> </p> 
+  <h2 align="center">YouTube MKBHD AI Chatbot</h2> <p align="center"> YouTube MKBHD AI Chatbot ~ trained on 100+ videos from tech-gadget YouTuber Marques Brownlee <a href="https://www.youtube.com/@mkbhd"> @MKBHD </a> </p> </div> <p align="center"> <img src="https://github.com/vdutts7/yt-chat-mkbhd/blob/main/public/p.gif"/> </p> 
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
@@ -34,21 +34,21 @@
     <a href="#contact">👤 Contact</a>
   </ol>
 
-
+<br ></br>
 
 <!-- ABOUT -->
 ## 📝 About
 
 Chat with 100+ YouTube videos from any creator in less than 10 minutes. This project combines basic Python scripting, vector embeddings, OpenAI, Pinecone, and Langchain into a modern chat interface, allowing you to quickly reference any content your favorite YouTuber covers. Type in natural language and get returned detailed answers: (1) in the style / tone of your YouTuber, and (2) with the top 2-3 specific videos referenced hyperlinked.
 
-
 _Example used in this repo is tech content creator Marques Brownlee, also known as MKBHD_ 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p> 
 
-## 💻 How to build 
 
+## 💻 How to build 
 _Note: macOS version, adjust accordingly for Windows / Linux_
+
 
 ### Initial setup
 
@@ -78,9 +78,7 @@ Get API keys:
 
 _**IMPORTANT: Verify that `.gitignore` contains `.env` in it.**_
 
-
-
-
+<br ></br>
 
 ### Handle massive data
 
@@ -115,16 +113,19 @@ Download audio files.
 
 <img width="164" alt="image" src="https://github.com/vdutts7/yt-ai-chat/assets/63992417/f1105604-145b-4019-8026-f1c262497cde">
 
-2️⃣ Transcribe audio files ✍️
+2️⃣ **Transcribe audio files** ✍️
 
-We will utilize AssemblyAI's API wrapper class for OpenAI's Whisper API. Their script provides step-by-step directions for a more efficient, faster speech-to-text conversion as Whisper is way too slow and will cost you more. I spent ~ $3.50 to transcribe the 100 videos for MKBHD.
+We will utilize AssemblyAI's API wrapper class for OpenAI's Whisper API. Their script provides step-by-step directions for a more efficient, faster speech-to-text conversion as Whisper is way too slow and will cost you more. I spent ~ $3.50 to transcribe the 100 videos for MKBHD. 
+
+<img width="348" alt="image" src="https://github.com/vdutts7/yt-ai-chat/assets/63992417/e40716c7-1ab6-460a-bd39-b7658c052958">
+
 
 `python scripts/transcribe_audios.py scripts/audio_files/ scripts/transcripts`
 
 ![Uploading image.png…]()
 
 
-3️⃣ Upsert to Pinecone database ⬆️☁️**
+3️⃣ **Upsert to Pinecone database** ⬆️☁️**
 
 - `python scripts/pinecone_helper.py scripts/vid_list/mkbhd.csv scripts/transcripts/`
 

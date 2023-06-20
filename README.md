@@ -147,7 +147,7 @@ The relevant video titles are cited via hyperlinks directly to the video url.
 
 ### Frontend UI with chat
 
-NextJs styled with Tailwind CSS. `/pages/index.tsx` contains base skeleton. `/pages/chat-chain.ts` is heart of the code where the Langchain connections are outlined.
+NextJs styled with Tailwind CSS. `src/pages/index.tsx` contains base skeleton. `src/pages/api/chat-chain.ts` is heart of the code where the Langchain connections are outlined.
 
 ### Run app
 
@@ -163,7 +163,7 @@ Go to `http://localhost:3000`. You should be able to type and ask questions now.
 
 ### Deploy
 
-I used [Vercel](https://vercel.com/dashboard) as this was a small project.
+I used [Vercel](https://vercel.com/dashboard) as this was a relatively small project.
 
 _Alternatives: Heroku, Firebase, AWS Elastic Beanstalk, DigitalOcean, etc._
 
@@ -171,7 +171,7 @@ _Alternatives: Heroku, Firebase, AWS Elastic Beanstalk, DigitalOcean, etc._
 
 **UI/UX:** change to your liking. 
 
-**Bot behavior:** edit prompt template in `/utils/makechain.ts` to fine-tune and add greater control on the bot's outputs.
+**Bot behavior:** edit prompt template in `/src/pages/api/chat-chain.ts` to fine-tune and add greater control on the bot's outputs.
 
 **Data:** change URLs to handle whatever pages you want
 
@@ -184,8 +184,8 @@ _Alternatives: Heroku, Firebase, AWS Elastic Beanstalk, DigitalOcean, etc._
 [![Typescript][Typescript]][Typescript-url]
 [![Langchain][Langchain]][Langchain-url]
 [![OpenAI][OpenAI]][OpenAI-url]
-[![cheerio][cheerio]][cheerio-url]
-[![Supabase][Supabase]][Supabase-url]
+[![AssemblyAI][AssemblyAI]][AssemblyAI-url]
+[![Pinecone][Pinecone]][Pinecone-url]
 [![Tailwind CSS][TailwindCSS]][TailwindCSS-url]
 [![Vercel][Vercel]][Vercel-url]
 
@@ -197,7 +197,7 @@ _Alternatives: Heroku, Firebase, AWS Elastic Beanstalk, DigitalOcean, etc._
 
 `me@vdutts7.com` 
 
-🔗 Project Link: `https://github.com/vdutts7/cs186-ai-chat`
+🔗 Project Link: `https://github.com/vdutts7/yt-ai-chat`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -205,6 +205,8 @@ _Alternatives: Heroku, Firebase, AWS Elastic Beanstalk, DigitalOcean, etc._
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
+[Python]: https://img.shields.io/badge/Python-000000?style=for-the-badge&logo=python&logoColor=white
+[Python-url]: https://www.python.org/
 
 [Next]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
@@ -218,14 +220,14 @@ _Alternatives: Heroku, Firebase, AWS Elastic Beanstalk, DigitalOcean, etc._
 [OpenAI]: https://img.shields.io/badge/OpenAI%20ada--002%20GPT--3-0058A0?style=for-the-badge&logo=openai&logoColor=white&color=4aa481
 [OpenAI-url]: https://openai.com/
 
-[cheerio]: https://img.shields.io/badge/cheerio-DD0031?style=for-the-badge&logo=https://github.com/vdutts7/cs186-ai-chat/public/cheerio-logo.png&logoColor=white&color=db903c
-[cheerio-url]: https://cheerio.js.org/
+[AssemblyAI]: https://img.shields.io/badge/Assembly_AI-DD0031?style=for-the-badge&logo=https://github.com/vdutts7/yt-ai-chat/public/assemblyai.png&color=blue
+[AssembyAI-url]: https://www.assemblyai.com/
 
 [TypeScript]: https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white
 [Typescript-url]: https://www.typescriptlang.org/
 
-[Supabase]: https://img.shields.io/badge/Supabase%20pgvector-FFCA28?style=for-the-badge&logo=Supabase&logoColor=49E879&color=black
-[Supabase-url]: https://Supabase.com/
+[Pinecone]: https://img.shields.io/badge/Pinecone-FFCA28?style=for-the-badge&logo=https://github.com/vdutts7/yt-ai-chat/public/pinecone.png&logoColor=black&color=white
+[Pinecone-url]: https://www.pinecone.io/
 
 [Vercel]: https://img.shields.io/badge/Vercel-FFFFFF?style=for-the-badge&logo=Vercel&logoColor=white&color=black
 [Vercel-url]: https://Vercel.com/

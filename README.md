@@ -53,21 +53,21 @@ _Note: macOS version, adjust accordingly for Windows / Linux_
 
 Clone and install dependencies:
 
-    ```
+    
     git clone https://github.com/vdutts7/yt-ai-chat
     cd yt-ai-chat
     npm i
-    ```
+   
 
 Copy `.env.example` and rename to `.env` in root directory. Fill out API keys:
     
-    ```
+    
     ASSEMBLY_AI_API_TOKEN=""
     OPENAI_API_KEY=""
     PINECONE_API_KEY=""
     PINECONE_ENVIRONMENT=""
     PINECONE_INDEX=""
-    ```
+    
 
 Get API keys:
     - [AssemblyAI](https://www.assemblyai.com/docs) - ~ $3.50 per 100 vids
@@ -86,16 +86,16 @@ Outline:
 
 Navigate to `scripts` folder, which will host all of the data from the YouTube videos. 
    
-   `cd scripts`
+   cd scripts
 
 Setup python environemnt:   
-    - `conda env list`
-    - `conda activate youtube-chat`
-    - `pip install -r requirements.txt`
+    - conda env list
+    - conda activate youtube-chat
+    - pip install -r requirements.txt
 
 Scrape YouTube channel-- replace `@mkbhd` with channel of your choice. Replace `100` with the number of videos you want included (the script traverses backwards starting from most recent upload). A new file `mkbhd.csv` will be created at the directory as referenced below:
     
-    `python scripts/scrape_vids.py https://www.youtube.com/@mkbhd 100 scripts/vid_list/mkbhd.csv`
+    python scripts/scrape_vids.py https://www.youtube.com/@mkbhd 100 scripts/vid_list/mkbhd.csv
 
 Refer to `example_mkbhd.csv` inside folder and verify your output matches this format:
 
@@ -103,7 +103,7 @@ Refer to `example_mkbhd.csv` inside folder and verify your output matches this f
     
 Download audio files:
 
-    `python scripts/download_yt_audios.py scripts/vid_list/mkbhd.csv scripts/audio_files/`
+    python scripts/download_yt_audios.py scripts/vid_list/mkbhd.csv scripts/audio_files/
 
 <img width="130" alt="image" src="https://github.com/vdutts7/yt-ai-chat/assets/63992417/8c16f79a-2957-4d45-b81e-c450cf7e77f1">
 
@@ -111,7 +111,7 @@ We will utilize AssemblyAI's API wrapper class for OpenAI's Whisper API. Their s
 
 <img width="348" alt="image" src="https://github.com/vdutts7/yt-ai-chat/assets/63992417/e40716c7-1ab6-460a-bd39-b7658c052958">
 
-    `python scripts/transcribe_audios.py scripts/audio_files/ scripts/transcripts`
+    python scripts/transcribe_audios.py scripts/audio_files/ scripts/transcripts
 
 <img width="164" alt="image" src="https://github.com/vdutts7/yt-ai-chat/assets/63992417/f1105604-145b-4019-8026-f1c262497cde">
 

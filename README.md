@@ -49,18 +49,18 @@ _Example used in this repo is tech content creator Marques Brownlee, also known 
 ## 💻 How to build 
 _Note: macOS version, adjust accordingly for Windows / Linux_
 
+### Initial setup
 
-1) ### Initial setup
+Clone and install dependencies:
 
-    Clone and install dependencies.
-    
     ```
     git clone https://github.com/vdutts7/yt-ai-chat
     cd yt-ai-chat
     npm i
     ```
 
-    Copy `.env.example` and rename to `.env` in root directory. Fill out API keys:
+Copy `.env.example` and rename to `.env` in root directory. Fill out API keys:
+    
     ```
     ASSEMBLY_AI_API_TOKEN=""
     OPENAI_API_KEY=""
@@ -69,68 +69,58 @@ _Note: macOS version, adjust accordingly for Windows / Linux_
     PINECONE_INDEX=""
     ```
 
-    Get API keys:
+Get API keys:
     - [AssemblyAI](https://www.assemblyai.com/docs) - ~ $3.50 per 100 vids
     - [OpenAI](https://help.openai.com/en/articles/4936850-where-do-i-find-my-secret-api-key)
     - [Pinecone](https://docs.pinecone.io/docs/quickstart)
       
-    
-    _**IMPORTANT: Verify that `.gitignore` contains `.env` in it.**_
+_**IMPORTANT: Verify that `.gitignore` contains `.env` in it.**_
 
 
+### Handle massive data
 
-**2)** ### Handle massive data
+Outline: 
+- Export metadata (.csv) of YouTube videos ⬇️
+- Download the audio files
+- Transcribe audio files
 
-   Navigate to `scripts` folder, which will host all of the data from the YouTube videos. 
-
+Navigate to `scripts` folder, which will host all of the data from the YouTube videos. 
+   
    `cd scripts`
 
-   ** 2a) Download YT videos ⬇️**
+Setup python environemnt:   
+    - `conda env list`
+    - `conda activate youtube-chat`
+    - `pip install -r requirements.txt`
 
-        Setup python environemnt:
-        
-        - `conda env list`
-        - `conda activate youtube-chat`
-        - `pip install -r requirements.txt`
-
-        Scrape YT channel. Replace `@mkbhd` with channel of your choice. Replace `100` with the number of videos you wanT          inlcuded (the script traverses backwards starting from most recent upload). A new file `mkbhd.csv` will be created         at the directory as referenced below:
-
+Scrape YouTube channel-- replace `@mkbhd` with channel of your choice. Replace `100` with the number of videos you want included (the script traverses backwards starting from most recent upload). A new file `mkbhd.csv` will be created at the directory as referenced below:
+    
     `python scripts/scrape_vids.py https://www.youtube.com/@mkbhd 100 scripts/vid_list/mkbhd.csv`
 
-    Refer to the  `example_mkbhd.csv` inside folder and verify your output matches this format:
+Refer to `example_mkbhd.csv` inside folder and verify your output matches this format:
 
-    <img width="400" alt="image" src="https://github.com/vdutts7/yt-ai-chat/assets/63992417/7bf1c02c-7201-48b4-9607-e6de72fcafa2">
+<img width="400" alt="image" src="https://github.com/vdutts7/yt-ai-chat/assets/63992417/7bf1c02c-7201-48b4-9607-e6de72fcafa2">
     
-    
-    **2b) Download audio files**
+Download audio files:
 
     `python scripts/download_yt_audios.py scripts/vid_list/mkbhd.csv scripts/audio_files/`
 
 <img width="130" alt="image" src="https://github.com/vdutts7/yt-ai-chat/assets/63992417/8c16f79a-2957-4d45-b81e-c450cf7e77f1">
 
-
-<img width="164" alt="image" src="https://github.com/vdutts7/yt-ai-chat/assets/63992417/f1105604-145b-4019-8026-f1c262497cde">
-
-2️⃣ **Transcribe audio files** ✍️
-
 We will utilize AssemblyAI's API wrapper class for OpenAI's Whisper API. Their script provides step-by-step directions for a more efficient, faster speech-to-text conversion as Whisper is way too slow and will cost you more. I spent ~ $3.50 to transcribe the 100 videos for MKBHD. 
 
 <img width="348" alt="image" src="https://github.com/vdutts7/yt-ai-chat/assets/63992417/e40716c7-1ab6-460a-bd39-b7658c052958">
 
+    `python scripts/transcribe_audios.py scripts/audio_files/ scripts/transcripts`
 
-`python scripts/transcribe_audios.py scripts/audio_files/ scripts/transcripts`
+<img width="164" alt="image" src="https://github.com/vdutts7/yt-ai-chat/assets/63992417/f1105604-145b-4019-8026-f1c262497cde">
 
-![Uploading image.png…]()
+Upsert to Pinecone database:
 
-
-3️⃣ **Upsert to Pinecone database** ⬆️☁️**
-
-`python scripts/pinecone_helper.py scripts/vid_list/mkbhd.csv scripts/transcripts/`
+    `python scripts/pinecone_helper.py scripts/vid_list/mkbhd.csv scripts/transcripts/`
 
 Pinecone index setup I used below. I used P1 since this is optimized for speed. 1536 is OpenAI's standard we're limited to when querying data from the vectorstore: 
 <img width="951" alt="image" src="https://github.com/vdutts7/yt-ai-chat/assets/63992417/01deb2f1-f563-4e9d-97bf-d32ccda61d62">
-
-
 
 ### Embeddings and database backend
 
@@ -138,11 +128,13 @@ Breaking down `scripts/pinecone_helper.py` :
 - Chunk size of 1000 characters with 500 character overlap. I found this working for me but obviously experiment and adjust according to your content library's size, complexity, etc.
 - Metadata: (1) video url and (2) video title
 
-With vectorstore loaded, we use Langchain's Conversational Retrieval QA to ask questions, extract relevant metadata from Pinecone, and deliver it back to the user in a packaged answer format
+With Pinecone vectorstore loaded, we use Langchain's Conversational Retrieval QA to ask questions, extract relevant metadata from our embeddings, and deliver back to the user in a packaged format as an answer. 
+
+The relevant video titles are cited via hyperlinks directly to the video url.
 
 ### Frontend UI with chat
 
-xxxxx
+NextJs styled with Tailwind CSS. `/pages/index.tsx` contains base skeleton. `/pages/chat-chain.ts` is heart of the code where the Langchain connections are outlined.
 
 ### Run app
 

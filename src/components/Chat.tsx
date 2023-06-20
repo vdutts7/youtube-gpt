@@ -37,7 +37,7 @@ function Chat() {
     // Handle AI response here
     setLoading(true);
     axios
-      .post("/api/langchain", {
+      .post("/api/chat-chain", {
         question: input,
         chat_history: chatHistory,
       })

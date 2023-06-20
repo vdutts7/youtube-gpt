@@ -182,6 +182,7 @@ _Alternatives: Heroku, Firebase, AWS Elastic Beanstalk, DigitalOcean, etc._
 ## 🔧 Built With
 [![Next][Next]][Next-url]
 [![Typescript][Typescript]][Typescript-url]
+[![Python][Python]][Python-url]
 [![Langchain][Langchain]][Langchain-url]
 [![OpenAI][OpenAI]][OpenAI-url]
 [![AssemblyAI][AssemblyAI]][AssemblyAI-url]
@@ -221,7 +222,7 @@ _Alternatives: Heroku, Firebase, AWS Elastic Beanstalk, DigitalOcean, etc._
 [OpenAI-url]: https://openai.com/
 
 [AssemblyAI]: https://img.shields.io/badge/Assembly_AI-DD0031?style=for-the-badge&logo=https://github.com/vdutts7/yt-ai-chat/public/assemblyai.png&color=blue
-[AssembyAI-url]: https://www.assemblyai.com/
+[AssemblyAI-url]: https://www.assemblyai.com/
 
 [TypeScript]: https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white
 [Typescript-url]: https://www.typescriptlang.org/

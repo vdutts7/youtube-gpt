@@ -158,6 +158,8 @@ npm run dev
 Go to `http://localhost:3000`. You should be able to type and ask questions now. Done ✅ 
 
 <img src="https://github.com/vdutts7/yt-ai-chat/assets/63992417/0a795dca-41e4-4d34-80b9-ebe19268571c" alt="Logo" width="390" height="390">
+<img width="700" alt="Screenshot 2023-06-20 at 4 17 08 PM" src="https://github.com/vdutts7/yt-ai-chat/assets/63992417/ae39f653-1ea2-4b96-8ea3-1a09cd008cbd">
+
 
 ## 🚀 Next steps
 
@@ -171,9 +173,7 @@ _Alternatives: Heroku, Firebase, AWS Elastic Beanstalk, DigitalOcean, etc._
 
 **UI/UX:** change to your liking. 
 
-**Bot behavior:** edit prompt template in `/src/pages/api/chat-chain.ts` to fine-tune and add greater control on the bot's outputs.
-
-**Data:** change URLs to handle whatever pages you want
+**Bot personality:** edit prompt template in `/src/pages/api/chat-chain.ts` to fine-tune and add greater control on the bot's outputs.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

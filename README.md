@@ -50,64 +50,61 @@ _Example used in this repo is tech content creator Marques Brownlee, also known 
 _Note: macOS version, adjust accordingly for Windows / Linux_
 
 
-### Initial setup
+1) ### Initial setup
 
-Clone the repo and install dependencies.
+    Clone and install dependencies.
+    
+    ```
+    git clone https://github.com/vdutts7/yt-ai-chat
+    cd yt-ai-chat
+    npm i
+    ```
 
-```
-git clone https://github.com/vdutts7/yt-ai-chat
-cd yt-ai-chat
-npm i
-```
+    Copy `.env.example` and rename to `.env` in root directory. Fill out API keys:
+    ```
+    ASSEMBLY_AI_API_TOKEN=""
+    OPENAI_API_KEY=""
+    PINECONE_API_KEY=""
+    PINECONE_ENVIRONMENT=""
+    PINECONE_INDEX=""
+    ```
 
-Create a .env file in root directory and add your API keys (refer `.env.example` for this template):
-
-```
-ASSEMBLY_AI_API_TOKEN=""
-OPENAI_API_KEY=""
-PINECONE_API_KEY=""
-PINECONE_ENVIRONMENT=""
-PINECONE_INDEX=""
-```
-
-Get API keys:
-- [AssemblyAI](https://www.assemblyai.com/docs) - ~ $3.50 per 100 vids
-- [OpenAI](https://help.openai.com/en/articles/4936850-where-do-i-find-my-secret-api-key)
-- [Pinecone](https://docs.pinecone.io/docs/quickstart)
-  
-
-_**IMPORTANT: Verify that `.gitignore` contains `.env` in it.**_
-
-<br ></br>
-
-### Handle massive data
+    Get API keys:
+    - [AssemblyAI](https://www.assemblyai.com/docs) - ~ $3.50 per 100 vids
+    - [OpenAI](https://help.openai.com/en/articles/4936850-where-do-i-find-my-secret-api-key)
+    - [Pinecone](https://docs.pinecone.io/docs/quickstart)
+      
+    
+    _**IMPORTANT: Verify that `.gitignore` contains `.env` in it.**_
 
 
-Navigate to `scripts` folder, which will host all of the data from the YouTube videos. 
 
+**2)** ### Handle massive data
 
-`cd scripts`
+   Navigate to `scripts` folder, which will host all of the data from the YouTube videos. 
 
+   `cd scripts`
 
-**1️⃣ Download YT videos ⬇️**
+   ** 2a) Download YT videos ⬇️**
 
-Setup python environemnt:
-- `conda env list`
-- `conda activate youtube-chat`
-- `pip install -r requirements.txt`
+        Setup python environemnt:
+        
+        - `conda env list`
+        - `conda activate youtube-chat`
+        - `pip install -r requirements.txt`
 
-Scrape YT channel. Replace `@mkbhd` with channel of your choice. Replace `100` with the number of videos you want inlcuded (the script traverses backwards starting from most recent upload). A new file `mkbhd.csv` will be created at the directory as referenced below:
+        Scrape YT channel. Replace `@mkbhd` with channel of your choice. Replace `100` with the number of videos you wanT          inlcuded (the script traverses backwards starting from most recent upload). A new file `mkbhd.csv` will be created         at the directory as referenced below:
 
-`python scripts/scrape_vids.py https://www.youtube.com/@mkbhd 100 scripts/vid_list/mkbhd.csv`
+    `python scripts/scrape_vids.py https://www.youtube.com/@mkbhd 100 scripts/vid_list/mkbhd.csv`
 
-Refer to the  `example_mkbhd.csv` inside the folder and verify your output matches the format. 
+    Refer to the  `example_mkbhd.csv` inside folder and verify your output matches this format:
 
-<img width="400" alt="image" src="https://github.com/vdutts7/yt-ai-chat/assets/63992417/7bf1c02c-7201-48b4-9607-e6de72fcafa2">
+    <img width="400" alt="image" src="https://github.com/vdutts7/yt-ai-chat/assets/63992417/7bf1c02c-7201-48b4-9607-e6de72fcafa2">
+    
+    
+    **2b) Download audio files**
 
-
-Download audio files.
-
-`python scripts/download_yt_audios.py scripts/vid_list/mkbhd.csv scripts/audio_files/`
+    `python scripts/download_yt_audios.py scripts/vid_list/mkbhd.csv scripts/audio_files/`
 
 <img width="130" alt="image" src="https://github.com/vdutts7/yt-ai-chat/assets/63992417/8c16f79a-2957-4d45-b81e-c450cf7e77f1">
 

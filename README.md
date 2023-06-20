@@ -83,11 +83,11 @@ _**IMPORTANT: Verify that `.gitignore` contains `.env` in it.**_
 ### Handle massive data
 
 
-Navigate to `scripts` folder. 
+Navigate to `scripts` folder, which will host all of the data from the YouTube videos. 
+
 
 `cd scripts`
 
-This folder will host all of the data from the YouTube videos. 
 
 **1️⃣ Download YT videos ⬇️**
 
@@ -96,19 +96,20 @@ Setup python environemnt:
 - `conda activate youtube-chat`
 - `pip install -r requirements.txt`
 
-Scrape YT channel. Replace `@mkbhd` with username of the channel of your choice and replace `100` with how ever no. of videos you want inlcuded (ccript traverses backwards starting from most recent upload). A new file `mkbhd.csv` will be created at the directory referenced below:
-- `python scripts/scrape_vids.py https://www.youtube.com/@mkbhd 100 scripts/vid_list/mkbhd.csv`
+Scrape YT channel. Replace `@mkbhd` with channel of your choice. Replace `100` with the number of videos you want inlcuded (the script traverses backwards starting from most recent upload). A new file `mkbhd.csv` will be created at the directory as referenced below:
+
+`python scripts/scrape_vids.py https://www.youtube.com/@mkbhd 100 scripts/vid_list/mkbhd.csv`
 
 Refer to the  `example_mkbhd.csv` inside the folder and verify your output matches the format. 
 
-<img width="614" alt="image" src="https://github.com/vdutts7/yt-ai-chat/assets/63992417/7bf1c02c-7201-48b4-9607-e6de72fcafa2">
+<img width="400" alt="image" src="https://github.com/vdutts7/yt-ai-chat/assets/63992417/7bf1c02c-7201-48b4-9607-e6de72fcafa2">
 
 
 Download audio files.
 
-- `python scripts/download_yt_audios.py scripts/vid_list/mkbhd.csv scripts/audio_files/`
+`python scripts/download_yt_audios.py scripts/vid_list/mkbhd.csv scripts/audio_files/`
 
-<img width="158" alt="image" src="https://github.com/vdutts7/yt-ai-chat/assets/63992417/8c16f79a-2957-4d45-b81e-c450cf7e77f1">
+<img width="130" alt="image" src="https://github.com/vdutts7/yt-ai-chat/assets/63992417/8c16f79a-2957-4d45-b81e-c450cf7e77f1">
 
 
 <img width="164" alt="image" src="https://github.com/vdutts7/yt-ai-chat/assets/63992417/f1105604-145b-4019-8026-f1c262497cde">
@@ -127,7 +128,7 @@ We will utilize AssemblyAI's API wrapper class for OpenAI's Whisper API. Their s
 
 3️⃣ **Upsert to Pinecone database** ⬆️☁️**
 
-- `python scripts/pinecone_helper.py scripts/vid_list/mkbhd.csv scripts/transcripts/`
+`python scripts/pinecone_helper.py scripts/vid_list/mkbhd.csv scripts/transcripts/`
 
 Pinecone index setup I used below. I used P1 since this is optimized for speed. 1536 is OpenAI's standard we're limited to when querying data from the vectorstore: 
 <img width="951" alt="image" src="https://github.com/vdutts7/yt-ai-chat/assets/63992417/01deb2f1-f563-4e9d-97bf-d32ccda61d62">
@@ -144,14 +145,7 @@ With vectorstore loaded, we use Langchain's Conversational Retrieval QA to ask q
 
 ### Frontend UI with chat
 
-The `scrape-embed.ts` script:
-
-- Retrieves URLs from `/config/class-website-urls.ts`, extract the HTML/CSS data via `cheerio` as specified in `/utils/custom_web_loader.ts` 
-- Vectorizes and embeds data into a JSON object using OpenAI's Embeddings(text-embedding-ada-002). This makes several vectors of 1536 dimensionality optimized for cosine similarity searches.
-- Upserts embeddings into `documents` (Supabase vectorstore). The upsert operation inserts new rows and overwrites existing rows.
-
-![visualized-flow-chart](https://github.com/vdutts7/cs186-ai-chat/assets/63992417/abb4be4c-06da-4be2-b29e-b10134e17c24)
-
+xxxxx
 
 ### Run app
 

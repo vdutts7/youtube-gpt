@@ -9,6 +9,11 @@
   </a>
   <h2 align="center">YouTubeGPT ft. Marques Brownlee (@MKBHD) </h2> <p align="center"> AI Chatbot with 100+ videos from tech/gadget YouTuber Marques Brownlee <a href="https://www.youtube.com/@mkbhd"> @MKBHD </a> </p> </div> <p align="center"> <img src="https://github.com/vdutts7/yt-chat-mkbhd/blob/main/public/p.gif"/> </p> 
 
+
+[![Website][website]][website-url]
+[![Github][github]][github-url]
+
+
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
   <ol>
@@ -194,13 +199,10 @@ _Alternatives: Heroku, Firebase, AWS Elastic Beanstalk, DigitalOcean, etc._
 
 
 <!-- CONTACT -->
-## 👤 Contact
+## 👤Contact
 
-`me@vdutts7.com` 
-
-🔗 Project Link: `https://github.com/vdutts7/yt-ai-chat`
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+[![Email][email]][email-url]
+[![Twitter][twitter]][twitter-url]
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
@@ -209,16 +211,13 @@ _Alternatives: Heroku, Firebase, AWS Elastic Beanstalk, DigitalOcean, etc._
 [Python]: https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54
 [Python-url]: https://www.python.org/
 
-[Next]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-
 [Langchain]: https://img.shields.io/badge/🦜🔗Langchain-DD0031?style=for-the-badge&color=<brightgreen>
 [Langchain-url]: https://langchain.com/
 
 [TailwindCSS]: https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=skyblue&color=0A192F
 [TailwindCSS-url]: https://tailwindcss.com/
 
-[OpenAI]: https://img.shields.io/badge/OpenAI%20ada--002%20GPT--3.5%20Whisper-0058A0?style=for-the-badge&logo=openai&logoColor=white&color=4aa481
+[OpenAI]: https://img.shields.io/badge/OpenAI_GPT--3.5_+_Whisper-0058A0?style=for-the-badge&logo=openai&logoColor=white&color=4aa481
 [OpenAI-url]: https://openai.com/
 
 [AssemblyAI]: https://img.shields.io/badge/Assembly_AI-DD0031?style=for-the-badge&logo=https://github.com/vdutts7/yt-ai-chat/public/assemblyai.png&color=blue
@@ -230,5 +229,18 @@ _Alternatives: Heroku, Firebase, AWS Elastic Beanstalk, DigitalOcean, etc._
 [Pinecone]: https://img.shields.io/badge/Pinecone-FFCA28?style=for-the-badge&https://github.com/vdutts7/yt-ai-chat/public/pinecone.png&logoColor=black&color=white
 [Pinecone-url]: https://www.pinecone.io/
 
+[Next]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
+[Next-url]: https://nextjs.org/
+
 [Vercel]: https://img.shields.io/badge/Vercel-FFFFFF?style=for-the-badge&logo=Vercel&logoColor=white&color=black
 [Vercel-url]: https://Vercel.com/
+
+
+[website]: https://img.shields.io/badge/🔗Website-7f18ff?style=for-the-badge
+[website-url]: https://ai-mkbhd.vercel.app/
+[github]: https://img.shields.io/badge/💻Github-000000?style=for-the-badge
+[github-url]: https://github.com/vdutts7/youtube-gpt/
+[email]: https://img.shields.io/badge/me@vdutts7.com-FFCA28?style=for-the-badge&logo=Gmail&logoColor=00bbff&color=black
+[email-url]: #
+[twitter]: https://img.shields.io/badge/Twitter-FFCA28?style=for-the-badge&logo=Twitter&logoColor=00bbff&color=black
+[twitter-url]: https://twitter.com/vdutts7/

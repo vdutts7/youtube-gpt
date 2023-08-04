@@ -10,8 +10,6 @@
   
 
   <h2 align="center">YouTubeGPT ft. Marques Brownlee (@MKBHD) </h2> <p align="center"> AI Chatbot with 100+ videos from tech/gadget YouTuber Marques Brownlee 
-[![Website][website]][website-url]
-[![Github][github]][github-url] 
 <a href="https://www.youtube.com/@mkbhd"> @MKBHD </a> </p> </div> <p align="center"> <img src="https://github.com/vdutts7/yt-chat-mkbhd/blob/main/public/p.gif"/> </p> 
 
 <!-- TABLE OF CONTENTS -->

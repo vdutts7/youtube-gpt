@@ -150,50 +150,32 @@ The relevant video titles are cited via hyperlinks directly to the video url.
 
 ### Frontend UI with chat
 
-NextJs styled with Tailwind CSS. `src/pages/index.tsx` contains base skeleton. `src/pages/api/chat-chain.ts` is heart of the code where the Langchain connections are outlined.
-
-### Run app
-
-```
-npm run dev
-```
-
-Go to `http://localhost:3000`. You should be able to type and ask questions now. Done ✅ 
+NextJs styled with Tailwind CSS. `src/pages/index.tsx` contains base skeleton. `src/pages/api/chat-chain.ts` is heart of the code where the Langchain connections are outlined. You should be able to type and ask questions now. Done ✅ 
 
 <img src="https://github.com/vdutts7/yt-ai-chat/assets/63992417/0a795dca-41e4-4d34-80b9-ebe19268571c" alt="Logo" width="390" height="390">
 <img width="500" alt="Screenshot 2023-06-20 at 4 17 08 PM" src="https://github.com/vdutts7/yt-ai-chat/assets/63992417/ae39f653-1ea2-4b96-8ea3-1a09cd008cbd">
 
 
-## 🚀 Next steps
+## 🚀Next Steps
 
-### Deploy
+- Add sidebar of video links to reference
+- User auth + DB backend to store chat history / log queries
+- Improve bot personality: edit prompt template in `/src/pages/api/chat-chain.ts` to fine-tune output to sound more realistic.
 
-I used [Vercel](https://vercel.com/dashboard) as this was a relatively small project.
-
-_Alternatives: Heroku, Firebase, AWS Elastic Beanstalk, DigitalOcean, etc._
-
-### Customizations
-
-**UI/UX:** change to your liking. 
-
-**Bot personality:** edit prompt template in `/src/pages/api/chat-chain.ts` to fine-tune and add greater control on the bot's outputs.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<br/>
 
 
-<!-- BUILT WITH -->
-## 🔧 Built With
-[![Next][Next]][Next-url]
-[![Typescript][Typescript]][Typescript-url]
-[![Python][Python]][Python-url]
-[![Langchain][Langchain]][Langchain-url]
-[![OpenAI][OpenAI]][OpenAI-url]
-[![AssemblyAI][AssemblyAI]][AssemblyAI-url]
-[![Pinecone][Pinecone]][Pinecone-url]
-[![Tailwind CSS][TailwindCSS]][TailwindCSS-url]
-[![Vercel][Vercel]][Vercel-url]
+## 🔧Tools Used
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+[![Python][python]][python-url]
+[![Langchain][langchain]][langchain-url]
+[![OpenAI][openai]][openai-url]
+[![AssemblyAI][assemblyai]][assemblyai-url]
+[![Pinecone][pinecone]][pinecone-url]
+[![Next][next]][next-url]
+[![Typescript][typescript]][typescript-url]
+[![Tailwind CSS][tailwindcss]][tailwindcss-url]
+[![Vercel][vercel]][vercel-url]
 
 
 <!-- CONTACT -->

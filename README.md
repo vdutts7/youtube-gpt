@@ -14,28 +14,20 @@
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
-  <ol>
+<ol>
     <a href="#about">📝 About</a>
         <ul>
         </ul>
-    <a href="#how-to-build">💻 How to build</a>
-        <ul>
-            <li><a href="#initial-setup">Initial setup</a></li>
-            <li><a href=#handle-massive-data>Handle massive data</a></li>
-            <li><a href=#embeddings-and-database-backend>Embeddings and database backend</a></li>
-            <li><a href=#Frontend-UI-with-chat>Frontend UI with chat</a></li>
-            <li><a href=#run-app>Run app</a></li>
-        </ul>
-    <a href="#next-steps">🚀 Next steps</a>
-        <ul>
-            <li><a href=#deploy>Deploy</a></li>
-            <li><a href=#customizations>Customizations</a></li>
+    <a href="#how-to-build">💻 How to build</a><br/>
+    <a href="#next-steps">🚀 Next steps</a> 
+       <ul>
         </ul>
     <a href="#tools-used">🔧 Tools used</a>
         <ul>
         </ul>
     <a href="#contact">👤 Contact</a>
   </ol>
+
 
 <br ></br>
 

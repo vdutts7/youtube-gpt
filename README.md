@@ -238,7 +238,7 @@ _Alternatives: Heroku, Firebase, AWS Elastic Beanstalk, DigitalOcean, etc._
 [website-url]: https://ai-mkbhd.vercel.app/
 [github]: https://img.shields.io/badge/💻Github-000000?style=for-the-badge
 [github-url]: https://github.com/vdutts7/youtube-gpt/
-[email]: https://img.shields.io/badge/me@vdutts7.com-FFCA28?style=for-the-badge&logo=Gmail&logoColor=00bbff&color=black
+[email]: https://img.shields.io/badge/me@vd7.io-FFCA28?style=for-the-badge&logo=Gmail&logoColor=00bbff&color=black
 [email-url]: #
 [twitter]: https://img.shields.io/badge/Twitter-FFCA28?style=for-the-badge&logo=Twitter&logoColor=00bbff&color=black
 [twitter-url]: https://twitter.com/vdutts7/

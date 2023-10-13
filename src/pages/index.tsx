@@ -9,7 +9,7 @@ const Home = () => {
       <div className="flex w-full md:ml-8 flex-row md:w-1/3 md:flex-col">
         <MKBHD />
       </div>
-      <div className="w-full md:w-6/3">
+      <div className="flex w-full md:w-2/3">
         <Chat />
       </div>
     </div>

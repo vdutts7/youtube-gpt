@@ -1,16 +1,16 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-    <img src="https://github.com/vdutts7/yt-chat-mkbhd/blob/main/public/yt-chat-logo_.png" alt="Logo" width="80" height="80">
-    <img src="https://github.com/vdutts7/yt-chat-mkbhd/blob/main/public/mkbhd.png" alt="Logo" width="75" height="75">
-    <img src="https://github.com/vdutts7/yt-chat-mkbhd/blob/main/public/openai.png" alt="Logo" width="67" height="67">
+    <img src="https://github.com/vdutts7/youtube-gpt/blob/main/public/yt-chat-logo_.png" alt="Logo" width="80" height="80">
+    <img src="https://github.com/vdutts7/youtube-gpt/blob/main/public/mkbhd.png" alt="Logo" width="75" height="75">
+    <img src="https://github.com/vdutts7/youtube-gpt/blob/main/public/openai.png" alt="Logo" width="67" height="67">
 
   
   </a>
   
 
   <h2 align="center">YouTubeGPT ft. Marques Brownlee (@MKBHD) </h2> <p align="center"> AI Chatbot with 100+ videos from tech/gadget YouTuber Marques Brownlee 
-<a href="https://www.youtube.com/@mkbhd"> @MKBHD </a> </p> </div> <p align="center"> <img src="https://github.com/vdutts7/yt-chat-mkbhd/blob/main/public/p.gif"/> </p> 
+<a href="https://www.youtube.com/@mkbhd"> @MKBHD </a> </p> </div> <p align="center"> <img src="https://github.com/vdutts7/youtube-gpt/blob/main/public/p.gif"/> </p> 
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
@@ -210,7 +210,7 @@ NextJs styled with Tailwind CSS. `src/pages/index.tsx` contains base skeleton. `
 
 
 [website]: https://img.shields.io/badge/🔗Website-7f18ff?style=for-the-badge
-[website-url]: https://ai-mkbhd.vercel.app/
+[website-url]: https://mkbhd-ai.vercel.app/
 [github]: https://img.shields.io/badge/💻Github-000000?style=for-the-badge
 [github-url]: https://github.com/vdutts7/youtube-gpt/
 [email]: https://img.shields.io/badge/me@vd7.io-FFCA28?style=for-the-badge&logo=Gmail&logoColor=00bbff&color=black

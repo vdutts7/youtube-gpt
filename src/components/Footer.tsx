@@ -16,8 +16,8 @@ const Footer = () => {
             @vdutts7.
           </a>
         </span>
-          Access the source code
-          <a href="https://github.com/vdutts7/yt-ai-chat" target="_blank" rel="noopener noreferrer" className="text-red-600 
+          View the full project
+          <a href="https://vd7.io/projects/youtube-gpt" target="_blank" rel="noopener noreferrer" className="text-red-600 
           hover:font-bold"> here.</a>
       </p>
     </div>

@@ -23,7 +23,16 @@ function Chat() {
 
   useEffect(() => {
     scrollToBottom();
-  }, [messages]);
+  
+    if (messages.length === 0) {
+      setMessages([
+        {
+          id: Date.now(),
+          sender: "System",
+          content: "Hey there.\n\n Ask me anything from my YouTube channel, get the answer, and exact timestamps for reference.\n Trained on all my videos up to June 2023.",
+        },
+      ]);    }
+  }, []);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

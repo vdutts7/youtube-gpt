@@ -39,8 +39,6 @@ Chat with 100+ YouTube videos from any creator in less than 10 minutes. This pro
 
 _Example used in this repo is tech content creator Marques Brownlee, also known as MKBHD_ 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p> 
-
 
 ## 💻 How to build 
 _Note: macOS version, adjust accordingly for Windows / Linux_

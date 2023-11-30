@@ -22,7 +22,7 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
-    "@primer/octicons-react":"",
+    "@primer/octicons-react": "",
     "@tabler/icons-react": "2.22.0",
     "@types/eslint": "^8.21.3",
     "@types/node": "^18.15.5",

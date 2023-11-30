@@ -13,7 +13,7 @@
     "@vercel/analytics": "^1.0.1",
     "axios": "^1.4.0",
     "langchain": "^0.0.64",
-    "next": "^13.2.4",
+    "next": "^13.5.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.8.0",
